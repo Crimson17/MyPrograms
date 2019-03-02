@@ -36,3 +36,4 @@ elif enkrilidekr == 1:
             print(y,"=",abecedaDic[y])
 else:
     print("Nisi unjeo tocan broj.")
+print("testiranje")
