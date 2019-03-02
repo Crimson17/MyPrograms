@@ -25,22 +25,14 @@ if enkrilidekr == 0:
             print(h, end="")
 
 elif enkrilidekr == 1:
-    o=0
-    frekvencijaslova = []
-    listapozicijaslova = []
+    listaslova = []
     rijec = input("Unesi rijec koju zelis dekriptirati: ")  #Input
-    for x in range(len(rijec)):
-        slovo = rijec[x]
-        if slovo in abeceda:
-            mijestoslova = abeceda.index(slovo)
-            listapozicijaslova.append(mijestoslova)
-    for y in range(26):
-        v = listapozicijaslova.count(y)
+    for x in abeceda:
+        v = rijec.count(x)
         if v != 0:
-            abecedaDic[abeceda[y]] = int(v)
-    for c in range(len(abecedaDic)):
-        if abecedaDic[abeceda[c]] != 0:
-            print(abeceda[c],"=",abecedaDic[abeceda[c]])
-
+            abecedaDic[x] = int(v)
+    for y in abecedaDic:
+        if abecedaDic[y] != 0:
+            print(y,"=",abecedaDic[y])
 else:
     print("Nisi unjeo tocan broj.")
