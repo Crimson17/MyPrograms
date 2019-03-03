@@ -1,53 +1,46 @@
 abeceda = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 #abecedaDic = {"a":0,"b":0,"c":0,"d":0,"e":0,"f":0,"g":0,"h":0,"i":0,"j":0,"k":0,"l":0,"m":0,"n":0,"o":0,"p":0,"q":0,
 #              "r":0,"s":0,"t":0,"u":0,"v":0,"w":0,"x":0,"y":0,"z":0}       WIP
-enkrilidekr = int(input("Enkriptiranje(0) ili Dekrptiranje(1)?: "))  #Provjerava sto zelis
+enkrilidekr = int(input("Enkriptiranje(0) ili Dekrptiranje(1)?: "))
 enkrlista = []
 blokada = 0
+blokada2 = 0
+blokada3 = 0
 if enkrilidekr == 0:
     zelimspace = int(input("Zelis li da sakrijem razmake?, 1 = da, 0 = ne: "))
-    if zelimspace != 0 and 1:
+    if zelimspace != 0 and zelimspace != 1:
         print(zelimspace, "nije niti 0 niti 1, idiote jedan.")
         blokada2 = 1
-    if blokada2 != 1:
-        rijec = input("Unesi rijec koju zelis enkriptirati: ")          #Inputi
+    if blokada2 == 0:
+        rijec = input("Unesi rijec koju zelis enkriptirati: ").lower()
         kljuc = int(input("Unesi broj kljuca: "))
-        for x in range(len(rijec)): #Ispisuje slova redom
-            slovo = rijec[x]
-            if slovo in abeceda: #Provjerava ima li to slovo u abecedi
-                enkrbroj = (kljuc + int(abeceda.index(slovo))) % 26
-                enkrlista.append(str(abeceda[enkrbroj]))
-            elif slovo == " " and zelimspace == 0:
-                enkrlista.append(" ")                  #Ovo su dijelovi za space
-            elif slovo == " " and zelimspace == 1:
-                continue
-            elif slovo not in abeceda:
-                print("Uneseno slovo nije ispravno. Pokusaj ponovo") #U slucaju da nema slova u abecedi
+        for x in rijec:
+            if x in abeceda:
+                print(abeceda[(kljuc + int(abeceda.index(x))) % 26], end="")
+            elif x == " " and zelimspace == 0:
+                print(" ",end="")
+            elif x == " " and zelimspace == 1:
+                print("",end="")
+            elif x not in abeceda:
+                print("Uneseno slovo nije ispravno. Pokusaj ponovno")
                 blokada = 1
-        for h in enkrlista:  #Ispisuje enkriptiranu listu na kraju
-            if blokada != 1:  #Blokada ako slovo nije u abecedi
-                print(h, end="")
+            if blokada != 0:
+                break
 
 elif enkrilidekr == 1:
-    listaslova = []
-    rijec = input("Unesi rijec koju zelis dekriptirati: ")  #Input
-    #for x in abeceda:
-    #    v = rijec.count(x)                 WIP
-    #    if v != 0:                         WIP
-    #        abecedaDic[x] = int(v)
-    for y in range(len(rijec)):
-        slovo = rijec[y]
-        listaslova.append(slovo)
+    rijec = input("Unesi rijec koju zelis dekriptirati: ").lower()
     for c in range(26):
         print("")
-        desiflista = []
-        for b in listaslova:
+        for b in rijec:
             if b == " ":
-                desiflista.append(" ")
+                print(" ", end="")
+            elif b in abeceda:
+                print(abeceda[(int(abeceda.index(b))-int(c)) % 26], end="")
             else:
-                desifslovo = abeceda[(int(abeceda.index(b))-int(c)) % 26]
-                desiflista.append(desifslovo)
-        for m in desiflista:
-            print(m, end="")
+                print("Unos:",b,"nije ispravan.")
+                blokada3 = 1
+        if blokada3 != 0:
+            break
+
 else:
     print(enkrilidekr,  "nije niti 0 niti 1, idiote jedan.")
