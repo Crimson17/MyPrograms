@@ -31,9 +31,19 @@ elif enkrilidekr == 1:
         v = rijec.count(x)
         if v != 0:
             abecedaDic[x] = int(v)
-    for y in abecedaDic:
-        if abecedaDic[y] != 0:
-            print(y,"=",abecedaDic[y])
+    for y in range(len(rijec)):
+        slovo = rijec[y]
+        listaslova.append(slovo)
+    for c in range(26):
+        print("")
+        desiflista = []
+        for b in listaslova:
+            if b == " ":
+                desiflista.append(" ")
+            else:
+                desifslovo = abeceda[(int(abeceda.index(b))-int(c)) % 26]
+                desiflista.append(desifslovo)
+        for m in desiflista:
+            print(m, end="")
 else:
     print("Nisi unjeo tocan broj.")
-print("testiranje")
