@@ -4,7 +4,7 @@ abeceda = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","
 enkrilidekr = input("Enkriptiranje(0) ili Dekrptiranje(1)?: ")  #Provjerava sto zelis
 enkrlista = []
 blokada = 0
-if enkrilidekr is 0:
+if enkrilidekr == 0:
     zelimspace = int(input("Zelis li da sakrijem razmake?, 1 = da, 0 = ne: "))
     rijec = input("Unesi rijec koju zelis enkriptirati: ")          #Inputi
     kljuc = int(input("Unesi broj kljuca: "))
@@ -24,7 +24,7 @@ if enkrilidekr is 0:
         if blokada != 1:  #Blokada ako slovo nije u abecedi
             print(h, end="")
 
-elif enkrilidekr is 1:
+elif enkrilidekr == 1:
     listaslova = []
     rijec = input("Unesi rijec koju zelis dekriptirati: ")  #Input
     #for x in abeceda:
