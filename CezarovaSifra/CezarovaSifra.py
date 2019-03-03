@@ -1,6 +1,6 @@
 abeceda = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-abecedaDic = {"a":0,"b":0,"c":0,"d":0,"e":0,"f":0,"g":0,"h":0,"i":0,"j":0,"k":0,"l":0,"m":0,"n":0,"o":0,"p":0,"q":0,
-              "r":0,"s":0,"t":0,"u":0,"v":0,"w":0,"x":0,"y":0,"z":0}
+#abecedaDic = {"a":0,"b":0,"c":0,"d":0,"e":0,"f":0,"g":0,"h":0,"i":0,"j":0,"k":0,"l":0,"m":0,"n":0,"o":0,"p":0,"q":0,
+#              "r":0,"s":0,"t":0,"u":0,"v":0,"w":0,"x":0,"y":0,"z":0}       VIP
 enkrilidekr = int(input("Enkriptiranje(0) ili dekrpitiranje(1)?: "))  #Provjerava sto zelis
 enkrlista = []
 blokada = 0
@@ -27,10 +27,10 @@ if enkrilidekr == 0:
 elif enkrilidekr == 1:
     listaslova = []
     rijec = input("Unesi rijec koju zelis dekriptirati: ")  #Input
-    for x in abeceda:
-        v = rijec.count(x)
-        if v != 0:
-            abecedaDic[x] = int(v)
+    #for x in abeceda:
+    #    v = rijec.count(x)                 VIP
+    #    if v != 0:                         VIP
+    #        abecedaDic[x] = int(v)
     for y in range(len(rijec)):
         slovo = rijec[y]
         listaslova.append(slovo)
