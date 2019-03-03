@@ -1,10 +1,10 @@
 abeceda = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 #abecedaDic = {"a":0,"b":0,"c":0,"d":0,"e":0,"f":0,"g":0,"h":0,"i":0,"j":0,"k":0,"l":0,"m":0,"n":0,"o":0,"p":0,"q":0,
-#              "r":0,"s":0,"t":0,"u":0,"v":0,"w":0,"x":0,"y":0,"z":0}       VIP
-enkrilidekr = int(input("Enkriptiranje(0) ili dekrpitiranje(1)?: "))  #Provjerava sto zelis
+#              "r":0,"s":0,"t":0,"u":0,"v":0,"w":0,"x":0,"y":0,"z":0}       WIP
+enkrilidekr = input("Enkriptiranje(0) ili Dekrptiranje(1)?: ")  #Provjerava sto zelis
 enkrlista = []
 blokada = 0
-if enkrilidekr == 0:
+if enkrilidekr is 0:
     zelimspace = int(input("Zelis li da sakrijem razmake?, 1 = da, 0 = ne: "))
     rijec = input("Unesi rijec koju zelis enkriptirati: ")          #Inputi
     kljuc = int(input("Unesi broj kljuca: "))
@@ -24,12 +24,12 @@ if enkrilidekr == 0:
         if blokada != 1:  #Blokada ako slovo nije u abecedi
             print(h, end="")
 
-elif enkrilidekr == 1:
+elif enkrilidekr is 1:
     listaslova = []
     rijec = input("Unesi rijec koju zelis dekriptirati: ")  #Input
     #for x in abeceda:
-    #    v = rijec.count(x)                 VIP
-    #    if v != 0:                         VIP
+    #    v = rijec.count(x)                 WIP
+    #    if v != 0:                         WIP
     #        abecedaDic[x] = int(v)
     for y in range(len(rijec)):
         slovo = rijec[y]
@@ -46,4 +46,4 @@ elif enkrilidekr == 1:
         for m in desiflista:
             print(m, end="")
 else:
-    print("Nisi unjeo tocan broj.")
+    print(enkrilidekr,  "nije niti 0 niti 1, idiote jedan.")
