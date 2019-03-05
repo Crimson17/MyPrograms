@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="098eb4e8-00d2-4ad1-8596-38e0eea9ac4e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/AfinaSifra/AfinaSifra.py" beforeDir="false" afterPath="$PROJECT_DIR$/AfinaSifra/AfinaSifra.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CezarovaSifra/CezarovaSifra.py" beforeDir="false" afterPath="$PROJECT_DIR$/CezarovaSifra/CezarovaSifra.py" afterDir="false" />
-    </list>
+    <list default="true" id="098eb4e8-00d2-4ad1-8596-38e0eea9ac4e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1551652297793</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="edit">
+      <created>1551655303639</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1551655303639</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -243,7 +247,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3296355" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3296355" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3296355" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39936608" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
