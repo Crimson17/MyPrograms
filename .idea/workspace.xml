@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="82d62ef5-8657-4309-9aa3-bf8d69271717" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/AfinaSifra.py" beforeDir="false" afterPath="$PROJECT_DIR$/AfinaSifra.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RandomTestiranje.py" beforeDir="false" afterPath="$PROJECT_DIR$/RandomTestiranje.py" afterDir="false" />
-    </list>
+    <list default="true" id="82d62ef5-8657-4309-9aa3-bf8d69271717" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +46,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="78" />
     <option name="y" value="78" />
     <option name="width" value="1280" />
@@ -176,7 +173,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
