@@ -7,13 +7,13 @@ blokada = 0
 blokada2 = 0
 blokada3 = 0
 if enkrilidekr == 0:
-    zelimspace = int(input("Zelis li da sakrijem razmake?, 1 = da, 0 = ne: "))
+    zelimspace = int(input("Zelite li sakriti razmake?, 1 = da, 0 = ne: "))
     if zelimspace != 0 and zelimspace != 1:
         print(zelimspace, "nije niti 0 niti 1, idiote jedan.")
         blokada2 = 1
     if blokada2 == 0:
-        rijec = input("Unesi rijec koju zelis enkriptirati: ").lower()
-        kljuc = int(input("Unesi broj kljuca: "))
+        rijec = input("Unesite rijec koju zelite enkriptirati: ").lower()
+        kljuc = int(input("Unesite broj kljuca: "))
         for x in rijec:
             if x in abeceda:
                 print(abeceda[(kljuc + int(abeceda.index(x))) % 26], end="")
@@ -22,13 +22,13 @@ if enkrilidekr == 0:
             elif x == " " and zelimspace == 1:
                 print("",end="")
             elif x not in abeceda:
-                print("Uneseno slovo nije ispravno. Pokusaj ponovno")
+                print("Uneseno slovo nije ispravno. Pokusajte ponovno")
                 blokada = 1
             if blokada != 0:
                 break
 
 elif enkrilidekr == 1:
-    rijec = input("Unesi rijec koju zelis dekriptirati: ").lower()
+    rijec = input("Unesite rijec koju zelite dekriptirati: ").lower()
     for c in range(26):
         print("")
         for b in rijec:
