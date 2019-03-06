@@ -5,7 +5,6 @@ abecedaBezSlova = []
 rijec = input("Unesite rijec koju zelite enkriptirati: ").lower()
 g=0
 h=0
-j=0
 k=0
 
 
@@ -21,8 +20,9 @@ for c in listaSlovauRijeci:
         g=0
         h=h+1
         matrica[h][g] = c
+j = len(listaSlovauRijeci) % 5
 for v in abeceda:
-    if v not in matrica:
+    if v not in matrica[0][0]:
         if j != 5:
             matrica[k][j] = v
             j=j+1
