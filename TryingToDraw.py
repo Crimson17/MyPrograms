@@ -45,6 +45,7 @@ t.right(60)
 t.down()
 t.speed(100)
 t.circle(40,120,240)
+t.hideturtle()
 
 
 
