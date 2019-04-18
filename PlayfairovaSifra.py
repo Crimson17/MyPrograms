@@ -20,7 +20,9 @@ for c in listaSlovauRijeci:
         g=0
         h=h+1
         matrica[h][g] = c
+print(matrica)
 j = len(listaSlovauRijeci) % 5
+print(j)
 for v in abeceda:
     if v not in matrica[0][0]:
         if j != 5:
@@ -30,4 +32,3 @@ for v in abeceda:
             j = 0
             k = k+1
             matrica[k][j] = v
-print(matrica)
