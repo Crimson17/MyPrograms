@@ -32,3 +32,4 @@ for v in abeceda:
             j = 0
             k = k+1
             matrica[k][j] = v
+stopiranje = input("\npress any key to exit...")

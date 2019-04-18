@@ -23,3 +23,4 @@ elif ekripIliDekrip is 1:
     #Wip
 else:
     print(ekripIliDekrip, "nije niti 0 niti 1, idiote jedan.")
+stopiranje = input("\npress any key to exit...")
