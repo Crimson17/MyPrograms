@@ -44,3 +44,4 @@ elif enkrilidekr == 1:
 
 else:
     print(enkrilidekr,  "nije niti 0 niti 1, idiote jedan.")
+stopiranje = input("press any key to exit")
