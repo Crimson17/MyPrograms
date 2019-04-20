@@ -1,8 +1,6 @@
+import requests
+from bs4 import BeautifulSoup
 
-
-webpage = ("https://www.bloomberg.com/quote/SPX:IND")
-pagehtml = urllib.urlopen(webpage)
-soup = BeautifulSoup(pagehtml, "html.parser")
-name_box = soup.find("h1", attrs={"class":"name"})
-name = name_box.text.strip()
-print(name)
+r = requests.get("https://www.random.org/")
+soup = BeautifulSoup(r.text, "html.parser")
+print(soup)
