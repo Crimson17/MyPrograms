@@ -15,9 +15,9 @@ if odbariFormata == 0:
 
     if kvalitetaZvuka != 192:
         if kvalitetaZvuka == 320:
-            browser.find_element_by_xpath('//a[@data-value="320"]').click()
+            browser.find_element_by_xpath('//*[@id="audioBitrate"]/div/ul/li[1]/a').click()
         elif kvalitetaZvuka == 96:
-            browser.find_element_by_xpath('//a[@data-value="96"]').click()
+            browser.find_element_by_xpath('//*[@id="audioBitrate"]/div/ul/li[5]/a').click()
         else:
             print('Odabir kvalitete nije tocan.')
 
