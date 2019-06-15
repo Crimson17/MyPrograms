@@ -4,22 +4,13 @@ from selenium import webdriver
 linkInput = str(input('Unesite Youtube link: '))
 odbariFormata = int(input('Samo zvuk?(0) ili video?(1) '))
 
-if odbariFormata == 0:
-
-    kvalitetaZvuka = int(input('Kvaliteta zvuka?: 320, 192 ili 96?: '))
-
+if odbariFormata == 1:
+    print('wip')
+else:
     browser = webdriver.Chrome('/Users/ivanperanovic/Documents/Webdriver/chromedriver')
     browser.get('https://www.onlinevideoconverter.com/mp3-converter')
-    browser.find_element_by_id('advanced-options-link').click()
-    browser.find_element_by_id('audioBitrate').click()
+    browser.find_element_by_id('texturl').send_keys(linkInput)
+    browser.find_element_by_id('convert1').click()
 
-    if kvalitetaZvuka != 192:
-        if kvalitetaZvuka == 320:
-            browser.find_element_by_xpath('//*[@id="audioBitrate"]/div/ul/li[1]/a').click()
-        elif kvalitetaZvuka == 96:
-            browser.find_element_by_xpath('//*[@id="audioBitrate"]/div/ul/li[5]/a').click()
-        else:
-            print('Odabir kvalitete nije tocan.')
 
-browser.find_element_by_id('texturl').send_keys(linkInput)
 
