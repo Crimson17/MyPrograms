@@ -27,7 +27,7 @@ try:
         time.sleep(1)
 except NoSuchElementException:
     browser.find_element_by_id('download').click()
-time.sleep(1.5)
+time.sleep(1)
 while y == 0:
     for r, d, f in os.walk(folderPath):
         for file in f:
