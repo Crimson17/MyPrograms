@@ -1,5 +1,5 @@
 from shutil import copy2
-import os, time, requests
+import os, time
 
 num = 0
 while os.path.isdir(r"C:\Users\Ivan\Desktop\Reaper_Project_%d" % num) == True:
