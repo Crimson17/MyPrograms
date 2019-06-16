@@ -1,12 +1,18 @@
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 import time, os
-
+from easygui import *
 
 y = 0
 listOfFiles = []
 linkInput = str(input('Unesite Youtube link: '))
-folderPath = r"C:\Users\Ivan\Desktop\YT_Download"
+folderPath = diropenbox("Choose your download destination!")
+chromeVersionTxt = open("YourChromeVersion.txt", "r")
+
+if "75" in chromeVersionTxt.read():
+    chromeVersionNumber = 75
+elif "76" in chromeVersionTxt.read():
+    chromeVersionNumber = 76
 
 if not os.path.isdir(folderPath):
     os.mkdir(folderPath)
@@ -16,7 +22,7 @@ preferences = {"download.default_directory": folderPath, "safebrowsing.enabled":
 
 options.add_experimental_option("prefs", preferences)
 
-browser = webdriver.Chrome(r"C:\Users\Ivan\Documents\WebDriver\chromedriver.exe", options=options)
+browser = webdriver.Chrome(r"ChromeVersions\%d.exe" % chromeVersionNumber, options=options)
 browser.get('https://ytmp3.cc/')
 browser.find_element_by_id('input').send_keys(linkInput)
 browser.find_element_by_id('submit').click()
@@ -28,7 +34,7 @@ try:
 except NoSuchElementException:
     browser.find_element_by_id('download').click()
 
-time.sleep(1.5)
+time.sleep(1) #Just in case it didn't start to download immediately
 
 while y == 0:
     for r, d, f in os.walk(folderPath):
@@ -38,6 +44,6 @@ while y == 0:
         time.sleep(0.5)
         listOfFiles = []
     else:
-        time.sleep(1)
+        time.sleep(0.5)
         y = 1
         browser.quit()
