@@ -8,6 +8,7 @@ listOfFiles = []
 linkInput = str(input('Unesite Youtube link: '))
 folderPath = diropenbox("Choose your download destination!")
 chromeVersionTxt = open("YourChromeVersion.txt", "r")
+folderPath = folderPath + "\YT_Download"
 
 if "75" in chromeVersionTxt.read():
     chromeVersionNumber = 75
