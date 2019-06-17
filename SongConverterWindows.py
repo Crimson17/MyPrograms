@@ -6,16 +6,16 @@ from easygui import *
 y = 0
 listOfFiles = []
 
-if "73" in open("Readme.txt").read():
+if "73" in open("FIRST_Readme.txt").read():
     chromeVersionNumber = 73
-elif "74" in open("Readme.txt").read():
+elif "74" in open("FIRST_Readme.txt").read():
     chromeVersionNumber = 74
-elif "75" in open("Readme.txt").read():
+elif "75" in open("FIRST_Readme.txt").read():
     chromeVersionNumber = 75
-elif "76" in open("Readme.txt").read():
+elif "76" in open("FIRST_Readme.txt").read():
     chromeVersionNumber = 76
 else:
-    sys.exit("You are either using unsupported Chrome version or you have inputed the wrong number in the Readme.txt file.")
+    sys.exit("You are either using unsupported Chrome version or you have inputed the wrong number in the FIRST_Readme.txt file.")
 
 linkInput = str(input('Youtube link: '))
 folderPath = diropenbox("Choose your download destination!")
