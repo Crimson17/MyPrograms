@@ -1,19 +1,25 @@
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
-import time, os
+import time, os, sys
 from easygui import *
 
 y = 0
 listOfFiles = []
-linkInput = str(input('Unesite Youtube link: '))
-folderPath = diropenbox("Choose your download destination!")
-chromeVersionTxt = open("YourChromeVersion.txt", "r")
-folderPath = folderPath + "\YT_Download"
 
-if "75" in chromeVersionTxt.read():
+if "73" in open("Readme.txt").read():
+    chromeVersionNumber = 73
+elif "74" in open("Readme.txt").read():
+    chromeVersionNumber = 74
+elif "75" in open("Readme.txt").read():
     chromeVersionNumber = 75
-elif "76" in chromeVersionTxt.read():
+elif "76" in open("Readme.txt").read():
     chromeVersionNumber = 76
+else:
+    sys.exit("You are either using unsupported Chrome version or you have inputed the wrong number in the Readme.txt file.")
+
+linkInput = str(input('Youtube link: '))
+folderPath = diropenbox("Choose your download destination!")
+folderPath = folderPath + "\YT_Download"
 
 if not os.path.isdir(folderPath):
     os.mkdir(folderPath)
@@ -30,7 +36,7 @@ browser.find_element_by_id('submit').click()
 
 try:
     while browser.find_element_by_xpath('//*[@id="download" and @href=""]'):
-        print('Please wait.')
+        print('Please wait..')
         time.sleep(1)
 except NoSuchElementException:
     browser.find_element_by_id('download').click()
@@ -47,4 +53,5 @@ while y == 0:
     else:
         time.sleep(0.5)
         y = 1
+        print("The video has been converted.")
         browser.quit()
