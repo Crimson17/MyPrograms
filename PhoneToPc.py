@@ -30,8 +30,7 @@ import time, os, easygui
 
 message = open(r"C:\Users\Ivan\Dropbox\AutoSongPlayer\Song.txt").read()
 
-while "1709" not in message:
+while "1709" not in open(r"C:\Users\Ivan\Dropbox\AutoSongPlayer\Song.txt").read():
     time.sleep(1.5)
-    message = open(r"C:\Users\Ivan\Dropbox\AutoSongPlayer\Song.txt").read()
     print(message)
 print("Stopped.")
