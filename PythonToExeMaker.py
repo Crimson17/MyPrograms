@@ -31,7 +31,6 @@ print(nameOfTheFile)
 print(pathToTheFile)
 
 
-os.system(r"cd C:\Users\Ivan\Desktop\ExeMakerFolder")
-os.system("pyinstaller -F %s" % pathToTheFile)
+os.system("pyinstaller.exe --onefile --windowed %s" % pathToTheFile)
 
 
