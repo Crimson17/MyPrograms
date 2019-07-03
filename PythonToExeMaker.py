@@ -1,43 +1,37 @@
-import easygui
-from tkinter import *
+import easygui, os
+from shutil import copy2
 import PyInstaller
-import os
 
-ikone = False
-ico = False
-
-def ikonFunc():
-    global ikone
-    ikone = True
-    window.destroy()
+y = "0"
+o = str('\\')
+pathList = []
+listNameOfTheFile = []
+nameOfTheFile = ""
 
 
-def imamIco():
-    global ico
-    ico = True
-    window2.destroy()
+filePath = easygui.fileopenbox("Choose you'r python file.",default=r"C:\Users\Ivan\Documents\GitHub\MyPrograms\*.py")
+desktopFolderPath = r"C:\Users\Ivan\Desktop\ExeMakerFolder"
 
-#odabir = easygui.fileopenbox("Odaberi file: ","",r"C:\Users\Ivan\Documents\GitHub\MyPrograms\DefaultOpener")
-dest = easygui.diropenbox("Odaberi destinaciju: ","",r"C:\Users\Ivan\Desktop")
+for x in filePath:
+    pathList.insert(0,str(x))
+for y in pathList:
+    if y == o:
+        break
+    else:
+        listNameOfTheFile.insert(0,y)
+for z in listNameOfTheFile:
+    nameOfTheFile = nameOfTheFile + z
+
+if not os.path.exists(desktopFolderPath):
+    os.mkdir(desktopFolderPath, 0o777)
+copy2(filePath, desktopFolderPath + "\\" + nameOfTheFile)
+
+pathToTheFile = desktopFolderPath + "\\" + nameOfTheFile
+print(nameOfTheFile)
+print(pathToTheFile)
 
 
+os.system(r"cd C:\Users\Ivan\Desktop\ExeMakerFolder")
+os.system("pyinstaller -F %s" % pathToTheFile)
 
-window = Tk()
-window.title("Ikone")
-window.resizable(width=False, height=False)
-window.geometry("800x600")
-photo1 = PhotoImage(file="imaga.gif")
-daButton = PhotoImage(file="da.gif")
-neButton = PhotoImage(file="ne.gif")
-#tekstSlika = PhotoImage(file="tekst.gif")
-Label(window, image=photo1, bg="white") .place(x=-2, y=-2)
-Label(window, text="Zelis li dodati svoju ikonicu?", fg="white", bg="black", font="none 19 bold") .place(relx=0.5, rely=0.27,anchor=CENTER)
-Button(window, image=daButton, command=ikonFunc) .place(relx=0.333, rely=0.55, anchor=CENTER)
-Button(window, image=neButton, command=window.destroy) .place(relx=0.666, rely=0.55, anchor=CENTER)
-window.mainloop()
-
-if ikone == True:
-    odabirIcoa = easygui.fileopenbox("Odaberi Ico file: ", "", r"C:\Users\Ivan\Documents\GitHub\MyPrograms\DefaultOpener")
-
-# WIP iako mi se neda vise
 

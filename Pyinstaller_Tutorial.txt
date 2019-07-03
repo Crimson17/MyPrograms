@@ -3,3 +3,5 @@ pyinstaller -w -F -i [icon file] [your python file]
 -w = Disable Console
 -F = Only one exe is created
 -i = Add your icon
+
+pyinstaller -F
