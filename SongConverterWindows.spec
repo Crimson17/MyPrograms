@@ -3,7 +3,7 @@
 block_cipher = None
 
 
-a = Analysis(['C:\\Users\\Ivan\\Documents\\GitHub\\MyPrograms\\TestingExeMaker.py'],
+a = Analysis(['C:\\Users\\Ivan\\Documents\\GitHub\\MyPrograms\\SongConverterWindows.py'],
              pathex=['C:\\Users\\Ivan\\Documents\\GitHub\\MyPrograms'],
              binaries=[],
              datas=[],
@@ -23,7 +23,7 @@ exe = EXE(pyz,
           a.zipfiles,
           a.datas,
           [],
-          name='TestingExeMaker',
+          name='SongConverterWindows',
           debug=False,
           bootloader_ignore_signals=False,
           strip=False,

@@ -1,36 +1,18 @@
-import easygui, os
-from shutil import copy2
-import PyInstaller
-
-y = "0"
-o = str('\\')
-pathList = []
-listNameOfTheFile = []
-nameOfTheFile = ""
-
+import easygui, os, ntpath
+from shutil import rmtree, copy2
 
 filePath = easygui.fileopenbox("Choose you'r python file.",default=r"C:\Users\Ivan\Documents\GitHub\MyPrograms\*.py")
-desktopFolderPath = r"C:\Users\Ivan\Desktop\ExeMakerFolder"
+fileName = ntpath.basename(filePath)
+exePath = r"dist\%s.exe" % fileName[:-3]
 
-for x in filePath:
-    pathList.insert(0,str(x))
-for y in pathList:
-    if y == o:
-        break
-    else:
-        listNameOfTheFile.insert(0,y)
-for z in listNameOfTheFile:
-    nameOfTheFile = nameOfTheFile + z
+terminalQuestion = input("Terminal? NO(0) YES(1)")
+iconQuestion = input("Icon? NO(0) YES(1)")
 
-if not os.path.exists(desktopFolderPath):
-    os.mkdir(desktopFolderPath, 0o777)
-copy2(filePath, desktopFolderPath + "\\" + nameOfTheFile)
+os.system("pyinstaller.exe -F %s" % filePath)
 
-pathToTheFile = desktopFolderPath + "\\" + nameOfTheFile
-print(nameOfTheFile)
-print(pathToTheFile)
+rmtree("build")
+rmtree("__pycache__")
 
+copy2(exePath, r"C:\Users\Ivan\Desktop\%s.exe" % fileName[:-3])
 
-os.system("pyinstaller.exe --onefile --windowed %s" % pathToTheFile)
-
-
+rmtree("dist")
