@@ -1,7 +1,7 @@
 import easygui, os, ntpath, sys, time
 from shutil import rmtree, copy2
 
-filePath = easygui.fileopenbox("Choose you'r python file.",default=r"C:\Users\Ivan\Documents\GitHub\MyPrograms\*.py")
+filePath = easygui.fileopenbox("Choose your python file.", default=r"C:\Users\Ivan\Documents\GitHub\MyPrograms\*.py")
 fileName = ntpath.basename(filePath)
 exePath = r"dist\%s.exe" % fileName[:-3]
 commandString = "pyinstaller.exe -F"
@@ -15,13 +15,14 @@ if terminalQuestion == "No":
     commandString = commandString + " -w"
 
 if iconQuestion == "Yes":
-    icoFilePath = easygui.fileopenbox("Choose you'r icon file.")
+    icoFilePath = easygui.fileopenbox("Choose your icon file.")
     if ".ico" not in ntpath.basename(icoFilePath):
         print("Icon file must have .ico extension")
         time.sleep(4)
         sys.exit()
     commandString = commandString + " -i " + icoFilePath
 time.sleep(0.1)
+
 os.system(commandString + " " + filePath)
 time.sleep(0.1)
 
