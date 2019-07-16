@@ -1,1 +1,1 @@
-print("Nothing to test rn")
+print("test")

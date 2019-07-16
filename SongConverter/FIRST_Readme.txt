@@ -1,4 +1,4 @@
-Please input you'r Chrome version here = 
+Please input you'r Chrome version here = 75
 
 You can check you'r Chrome version by:
 	1. Opening Chrome.
