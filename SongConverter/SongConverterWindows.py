@@ -25,7 +25,7 @@ if not os.path.isdir(folderPath):
     os.mkdir(folderPath)
 
 options = webdriver.ChromeOptions()
-preferences = {"download.default_directory": folderPath, "safebrowsing.enabled": "false"}
+preferences = {"download.default_directory": folderPath, "safebrowsing.enabled": "false", "profile.default_content_setting_values.notifications" : 2}
 
 options.add_experimental_option("prefs", preferences)
 
