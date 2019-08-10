@@ -1,0 +1,6 @@
+import sys
+sys.path.append(r'C:\Users\Ivan\Documents\GitHub\MyPrograms\Functions')
+from LoadingSequence import *
+
+loadingSequence(2)
+quitingSequence
