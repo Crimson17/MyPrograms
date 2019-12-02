@@ -12,7 +12,6 @@ while i % 10 != 0:
     stopTestiranja = 1                     #Definiranje ostalih varijabli
     brojTestiranja = 10
     brojacZnamenki = 0
-    obrnutiBroj = 0
 
     while stopTestiranja != 0:                          #Odredivanje broja znamenki unesenog prirodnog broja
         if i > brojTestiranja:
@@ -22,7 +21,8 @@ while i % 10 != 0:
             brojacZnamenki = brojacZnamenki + 1
             stopTestiranja = 0
 
-    potencijaBroja = brojacZnamenki             #Opet malo varijabli
+    potencijaBroja = brojacZnamenki                 #Opet malo varijabli
+    obrnutiBroj = 0
     k = i
 
     for j in range(brojacZnamenki):                                         #Zamjena znamenki broja
