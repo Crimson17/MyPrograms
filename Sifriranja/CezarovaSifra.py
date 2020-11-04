@@ -9,7 +9,7 @@ blokada3 = 0
 if enkrilidekr == 0:
     zelimspace = int(input("Zelite li sakriti razmake?, 1 = da, 0 = ne: "))
     if zelimspace != 0 and zelimspace != 1:
-        print(zelimspace, "nije niti 0 niti 1, idiote jedan.")
+        print(zelimspace, "nije niti 0 niti 1.")
         blokada2 = 1
     if blokada2 == 0:
         rijec = input("Unesite rijec koju zelite enkriptirati: ").lower()
@@ -43,5 +43,5 @@ elif enkrilidekr == 1:
             break
 
 else:
-    print(enkrilidekr,  "nije niti 0 niti 1, idiote jedan.")
+    print(enkrilidekr,  "nije niti 0 niti 1.")
 stopiranje = input("\npress any key to exit...")
